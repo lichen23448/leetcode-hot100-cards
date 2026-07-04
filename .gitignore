@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+dist/
+*.log
+
+# Local review artifacts generated while polishing the card content.
+audit-assets/
+card-audit-report.md
+style-audit.html

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Container With Most Water diagram</title>
+  <desc id="desc">A visual explanation of choosing index 1 and index 8 in the height array to get area 49.</desc>
+
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#37c5ff" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#1b75d0" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#f8d84e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#111318"/>
+
+  <text x="60" y="72" fill="#f7f7f7" font-family="Arial, sans-serif" font-size="34" font-weight="700">
+    盛最多水的容器
+  </text>
+  <text x="60" y="114" fill="#cfd6df" font-family="Arial, sans-serif" font-size="21">
+    height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+  </text>
+
+  <g transform="translate(0,0)" filter="url(#shadow)">
+    <rect x="46" y="146" width="1108" height="548" rx="16" fill="#191d24" stroke="#2e3440"/>
+  </g>
+
+  <!-- y-axis guide lines -->
+  <g stroke="#2e3440" stroke-width="1">
+    <line x1="94" y1="560" x2="1060" y2="560"/>
+    <line x1="94" y1="515" x2="1060" y2="515" opacity="0.38"/>
+    <line x1="94" y1="470" x2="1060" y2="470" opacity="0.38"/>
+    <line x1="94" y1="425" x2="1060" y2="425" opacity="0.38"/>
+    <line x1="94" y1="380" x2="1060" y2="380" opacity="0.38"/>
+    <line x1="94" y1="335" x2="1060" y2="335" opacity="0.38"/>
+    <line x1="94" y1="290" x2="1060" y2="290" opacity="0.38"/>
+    <line x1="94" y1="245" x2="1060" y2="245" opacity="0.38"/>
+    <line x1="94" y1="200" x2="1060" y2="200" opacity="0.38"/>
+  </g>
+
+  <!-- selected water area: between index 1 and index 8, height min(8,7)=7 -->
+  <rect x="265" y="245" width="735" height="315" fill="url(#water)" opacity="0.88"/>
+  <line x1="265" y1="245" x2="1000" y2="245" stroke="#8ee8ff" stroke-width="3" stroke-dasharray="8 10"/>
+
+  <!-- bars -->
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="138" y="515" width="44" height="45" rx="7" fill="#7b8491"/>
+    <text x="160" y="502" fill="#dbe2eb" font-size="20" font-weight="700">1</text>
+
+    <rect x="243" y="200" width="44" height="360" rx="7" fill="#75e06a"/>
+    <text x="265" y="187" fill="#dcffda" font-size="22" font-weight="800">8</text>
+
+    <rect x="348" y="290" width="44" height="270" rx="7" fill="#7b8491"/>
+    <text x="370" y="277" fill="#dbe2eb" font-size="20" font-weight="700">6</text>
+
+    <rect x="453" y="470" width="44" height="90" rx="7" fill="#7b8491"/>
+    <text x="475" y="457" fill="#dbe2eb" font-size="20" font-weight="700">2</text>
+
+    <rect x="558" y="335" width="44" height="225" rx="7" fill="#7b8491"/>
+    <text x="580" y="322" fill="#dbe2eb" font-size="20" font-weight="700">5</text>
+
+    <rect x="663" y="380" width="44" height="180" rx="7" fill="#7b8491"/>
+    <text x="685" y="367" fill="#dbe2eb" font-size="20" font-weight="700">4</text>
+
+    <rect x="768" y="200" width="44" height="360" rx="7" fill="#7b8491"/>
+    <text x="790" y="187" fill="#dbe2eb" font-size="20" font-weight="700">8</text>
+
+    <rect x="873" y="425" width="44" height="135" rx="7" fill="#7b8491"/>
+    <text x="895" y="412" fill="#dbe2eb" font-size="20" font-weight="700">3</text>
+
+    <rect x="978" y="245" width="44" height="315" rx="7" fill="#f8d84e"/>
+    <text x="1000" y="232" fill="#fff4a8" font-size="22" font-weight="800">7</text>
+  </g>
+
+  <!-- x-axis labels -->
+  <g font-family="Arial, sans-serif" font-size="18" fill="#aeb7c3" text-anchor="middle">
+    <text x="160" y="596">0</text>
+    <text x="265" y="596">1</text>
+    <text x="370" y="596">2</text>
+    <text x="475" y="596">3</text>
+    <text x="580" y="596">4</text>
+    <text x="685" y="596">5</text>
+    <text x="790" y="596">6</text>
+    <text x="895" y="596">7</text>
+    <text x="1000" y="596">8</text>
+  </g>
+
+  <!-- pointers -->
+  <g font-family="Arial, sans-serif" font-weight="800" text-anchor="middle">
+    <path d="M265 650 L265 586" stroke="#75e06a" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="265" y="676" fill="#75e06a" font-size="26">left</text>
+
+    <path d="M1000 650 L1000 586" stroke="#f8d84e" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="1000" y="676" fill="#f8d84e" font-size="26">right</text>
+  </g>
+
+  <!-- explanation panel -->
+  <g font-family="Arial, sans-serif">
+    <rect x="650" y="164" width="466" height="110" rx="14" fill="#101318" stroke="#3b4250"/>
+    <text x="676" y="203" fill="#f7f7f7" font-size="24" font-weight="800">选下标 1 和 8</text>
+    <text x="676" y="239" fill="#dbe2eb" font-size="21">宽度 = 8 - 1 = 7</text>
+    <text x="676" y="268" fill="#dbe2eb" font-size="21">高度 = min(8, 7) = 7，所以面积 = 49</text>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="82" y="620" width="434" height="54" rx="12" fill="#242a34" stroke="#3d4655"/>
+    <text x="104" y="655" fill="#f7f7f7" font-size="22" font-weight="700">
+      重点：水的高度由较矮的那根线决定
+    </text>
+  </g>
+</svg>

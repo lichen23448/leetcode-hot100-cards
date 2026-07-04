@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Hot 100 题卡</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <header class="brand">
+          <div>
+            <p class="eyebrow">LeetCode</p>
+            <h1>Hot 100 题卡</h1>
+          </div>
+          <div class="progress-ring" aria-label="题卡完成进度">
+            <span id="progressCount">0</span>
+            <small>/100</small>
+          </div>
+        </header>
+
+        <div class="toolbar">
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="题名 / 主题" />
+          </label>
+          <div class="filters" aria-label="筛选题目">
+            <button class="filter active" data-filter="all" type="button">全部</button>
+            <button class="filter" data-filter="mastered" type="button">掌握</button>
+            <button class="filter" data-filter="Easy" type="button">Easy</button>
+            <button class="filter" data-filter="Medium" type="button">Medium</button>
+            <button class="filter" data-filter="Hard" type="button">Hard</button>
+          </div>
+        </div>
+
+        <nav id="problemList" class="problem-list" aria-label="Hot 100 题目列表"></nav>
+      </aside>
+
+      <main class="content">
+        <section class="card-shell">
+          <div class="card-topline">
+            <div id="topicBadge" class="topic-badge"></div>
+            <div class="card-actions">
+              <button id="masterButton" class="ghost-button" type="button">标记掌握</button>
+              <button id="copyButton" class="ghost-button" type="button">复制代码</button>
+            </div>
+          </div>
+
+          <div class="title-row">
+            <div>
+              <p id="problemIndex" class="problem-index"></p>
+              <h2 id="problemTitle"></h2>
+              <p id="problemSubtitle" class="subtitle"></p>
+            </div>
+            <span id="difficultyPill" class="difficulty-pill"></span>
+          </div>
+
+          <div id="pendingBanner" class="pending-banner" hidden>
+            这道题还没讲到，题卡会按当前模板补充。
+          </div>
+
+          <div class="meta-grid">
+            <div>
+              <span>推荐方法</span>
+              <strong id="methodText"></strong>
+            </div>
+            <div>
+              <span>核心目标</span>
+              <strong id="goalText"></strong>
+            </div>
+            <div>
+              <span>复杂度</span>
+              <strong id="complexityText"></strong>
+            </div>
+          </div>
+
+          <section class="section-block">
+            <h3>题目</h3>
+            <p id="descriptionText"></p>
+          </section>
+
+          <section class="section-block">
+            <h3>例子</h3>
+            <pre id="exampleBlock" class="example-block"></pre>
+          </section>
+
+          <section class="thought-panel">
+            <span>一句话思路重点</span>
+            <p id="thoughtText"></p>
+          </section>
+
+          <section id="diagramSection" class="section-block diagram-section" hidden>
+            <h3>算法图解</h3>
+            <figure id="diagramFigure">
+              <img id="diagramImage" src="" alt="" />
+            </figure>
+            <div id="autoDiagram" class="auto-diagram" hidden></div>
+          </section>
+
+          <section class="section-block">
+            <h3>简单解释</h3>
+            <div id="explanationBlock" class="explanation"></div>
+          </section>
+
+          <section class="section-block">
+            <div class="code-heading">
+              <h3>Java 答案</h3>
+              <span id="copyStatus" aria-live="polite"></span>
+            </div>
+            <pre class="code-block"><code id="codeBlock"></code></pre>
+          </section>
+
+          <section class="notes-panel">
+            <label for="notesInput">我的笔记</label>
+            <textarea id="notesInput" rows="4" placeholder="记录卡点、易错点、复盘结论"></textarea>
+          </section>
+
+          <footer class="nav-footer">
+            <button id="prevButton" class="nav-button" type="button">上一题</button>
+            <button id="nextButton" class="nav-button primary" type="button">下一题</button>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <script src="./cards.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
